@@ -3905,6 +3905,9 @@ GameObject:
   - component: {fileID: 9580976}
   - component: {fileID: -5038487593936317169}
   - component: {fileID: 4047036985619829320}
+  - component: {fileID: 1793921226787752133}
+  - component: {fileID: 5544698124155986418}
+  - component: {fileID: -8751130570836660009}
   m_Layer: 0
   m_Name: Character_Governors_Daughter_01
   m_TagString: Untagged
@@ -3953,10 +3956,10 @@ Animator:
   m_GameObject: {fileID: 154498}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 409520c9226982345a49c9803624f208, type: 3}
-  m_Controller: {fileID: 9100000, guid: 9b5f3dc79387670409bc8aac8597ddd2, type: 2}
+  m_Controller: {fileID: 9100000, guid: c58241f5a9d04a341bad3434ec88bfe5, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -3973,7 +3976,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 154498}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -3998,11 +4001,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116c2d94121d1004fa50ca4c787fd13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  queuePadding: 1.1
+  queuePadding: 1.5
   _currentTarget: {fileID: 0}
   _isInQueue: 0
   _isInPOI: 0
   _previousInQueue: {fileID: 0}
+--- !u!114 &1793921226787752133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8b703575f51274cb0119e6f31ac3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5544698124155986418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8f4506a001b0e49ba05454d40203f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 403278}
+  lookAtTargetPosition: {x: 0, y: 0, z: 0}
+  lookAtCoolTime: 0.2
+  lookAtHeatTime: 0.2
+  looking: 1
+--- !u!114 &-8751130570836660009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca56f7f8d385614b828bd3b25e0ecaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkSpeed: 0.1
 --- !u!1 &155098
 GameObject:
   m_ObjectHideFlags: 0
