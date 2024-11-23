@@ -6,21 +6,23 @@ using UnityEngine.Assertions;
 
 public class VisitorSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject visitorPrefab;
+    [SerializeField] private List<GameObject> visitorPrefabs;
     [SerializeField] private float spawnRange = 25f;
     [SerializeField, Readonly] private int visitorCount = 1;
-    
+
+    private GameObject RandomVisitorPrefab => visitorPrefabs[Random.Range(0, visitorPrefabs.Count)];
+
     void Start()
     {
-        Assert.IsNotNull(visitorPrefab, "Visitor prefab not set!");
+        Assert.IsTrue(visitorPrefabs.Count > 0, "No visitor prefabs given!");
     }
-    
+
     public void SpawnVisitor()
     {
         var randomPosition = transform.position + Random.insideUnitSphere * spawnRange;
         NavMeshHit hit;
         NavMesh.SamplePosition(randomPosition, out hit, Mathf.Infinity, NavMesh.AllAreas);
-        var visitor = Instantiate(visitorPrefab, hit.position, Quaternion.identity);
+        var visitor = Instantiate(RandomVisitorPrefab, hit.position, Quaternion.identity);
         visitor.name = $"Visitor {visitorCount++}";
     }
     
