@@ -9,7 +9,7 @@ public class Visitor : MonoBehaviour
     public float QueuePadding => queuePadding;
     public Visitor PreviousInQueue { set => _previousInQueue = value; }
     
-    [SerializeField] private float queuePadding = .1f;
+    [SerializeField] private float queuePadding = 1f;
 
     [SerializeField, Readonly] private PointOfInterest _currentTarget;
     [SerializeField, Readonly] private bool _isInQueue = false;
