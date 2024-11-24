@@ -65,3 +65,4 @@ crashlytics-build.properties
 !URP_Extract_Me.unitypackage
 !URP_ExtractMe.unitypackage
 Assets/PolygonNature/Shaders/LWRP.unitypackage.meta
+*.7z
